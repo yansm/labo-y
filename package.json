@@ -1,0 +1,40 @@
+{
+  "name": "labo-y",
+  "version": "0.0.1",
+  "description": "a vue&express layout",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "nodemon --exec babel-node src/server/app-dev.js",
+    "build": "babel src/server -d output/server",
+    "start:prod": "npm run build && pm2 start output/server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yansm/labo-y.git"
+  },
+  "keywords": [
+    "vue",
+    "express",
+    "labo"
+  ],
+  "author": "yansanmu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yansm/labo-y/issues"
+  },
+  "homepage": "https://github.com/yansm/labo-y#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow-vue": "^1.0.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.18.6"
+  }
+}
